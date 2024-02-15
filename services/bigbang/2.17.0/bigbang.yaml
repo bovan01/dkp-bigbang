@@ -1,0 +1,27 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: bigbang
+  namespace: bigbang
+spec:
+  chart:
+    spec:
+      chart: ./helm-charts/bigbang/2.17.0/chart
+      sourceRef:
+        kind: GitRepository
+        name: bigbang-charts
+        namespace: bigbang-charts
+  interval: 15s
+  install:
+    crds: CreateReplace
+    remediation:
+      retries: 30
+  upgrade:
+    crds: CreateReplace
+    remediation:
+      retries: 30
+  releaseName: bigbang
+  valuesFrom:
+    - kind: ConfigMap
+      name: bigbang-2.17.0-defaults
+  targetNamespace: bigbang
