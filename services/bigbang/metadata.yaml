@@ -1,5 +1,6 @@
 displayName: Big Bang
 description: Deploys Platform One's Big Bang
+allowMultipleInstances: false
 category:
   - general
 # requiredDependencies:
