@@ -2,15 +2,17 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: bigbang
-  namespace: bigbang
+  namespace: ${releaseNamespace}
 spec:
   chart:
     spec:
-      chart: ./helm-charts/bigbang/2.17.0/chart
+      # could also specify path to extracted chart here
+      # chart: ./helm-charts/bigbang/2.17.0/chart
+      chart: ./helm-charts/bigbang/2.17.0/bigbang-2.17.0.tgz
       sourceRef:
         kind: GitRepository
-        name: bigbang-charts
-        namespace: bigbang
+        name: dkp-bigbang
+        namespace: ${workspaceNamespace}
   interval: 15s
   install:
     crds: CreateReplace
@@ -24,7 +26,4 @@ spec:
   valuesFrom:
     - kind: ConfigMap
       name: bigbang-2.17.0-defaults
-    - kind: ConfigMap
-      name: bigbang-config-overrides
-      optional: true
-  targetNamespace: bigbang
+  targetNamespace: ${releaseNamespace}
