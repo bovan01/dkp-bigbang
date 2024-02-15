@@ -1,0 +1,11 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: dkp-bigbang
+  namespace: ${workspaceNamespace}
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  timeout: 20s
+  url: https://github.com/some-things/dkp-bigbang
