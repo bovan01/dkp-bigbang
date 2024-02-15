@@ -24,4 +24,7 @@ spec:
   valuesFrom:
     - kind: ConfigMap
       name: bigbang-2.17.0-defaults
+    - kind: ConfigMap
+      name: bigbang-config-overrides
+      optional: true
   targetNamespace: bigbang
