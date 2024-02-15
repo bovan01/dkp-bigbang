@@ -10,7 +10,7 @@ spec:
       sourceRef:
         kind: GitRepository
         name: bigbang-charts
-        namespace: bigbang-charts
+        namespace: bigbang
   interval: 15s
   install:
     crds: CreateReplace
