@@ -1,12 +1,12 @@
 displayName: Big Bang
 description: Deploys Platform One's Big Bang
-# category:
-#   - monitoring
+category:
+  - general
 # requiredDependencies:
 #   - kube-prometheus-stack
 # type: platform
-# scope:
-#   - workspace
+scope:
+  - workspace
 # certifications:
 #   - certified
 #   - supported
