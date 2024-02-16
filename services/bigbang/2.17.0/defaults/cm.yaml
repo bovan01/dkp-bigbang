@@ -27,3 +27,11 @@ data:
     # disable kyverno policies, as some of the default installed Kyverno clusterpolicies can cause issues; alternatively, you could use policyexceptions
     kyvernoPolicies:
       enabled: false
+
+    addons:
+      metricsServer:
+        # -- Toggle deployment of metrics server
+        # Acceptable options are enabled: true, enabled: false, enabled: auto
+        # true = enabled / false = disabled / auto = automatic (Installs only if metrics API endpoint is not present)
+        # We explicitly disable metrics server due to possible race condition where prometheus adapter served metrics apiserivce is not available before installing bigbang
+        enabled: false
