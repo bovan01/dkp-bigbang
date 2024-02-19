@@ -2,7 +2,7 @@ displayName: Big Bang
 description: Big Bang is a declarative, continuous delivery tool for deploying DoD hardened and approved packages into a Kubernetes cluster.
 allowMultipleInstances: false
 category:
-  - DoD Packages
+  - DoD
 # requiredDependencies:
 #   - kube-prometheus-stack
 # type: platform
