@@ -3,7 +3,7 @@ description: Big Bang is a declarative, continuous delivery tool for deploying D
 allowMultipleInstances: false
 category:
   - Dod
-type: Custom
+# type: Custom
 scope:
   - workspace
 overview: |-
