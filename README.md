@@ -17,7 +17,7 @@ metadata:
   name: bigbang-catalog 
   namespace: ${WORKSPACE_NAME}
   labels:
-    kommander.d2iq.io/gitapps-gitrepository-type: dkp
+    kommander.d2iq.io/gitapps-gitrepository-type: catalog
     kommander.d2iq.io/gitrepository-type: catalog
 spec:
   interval: 1m0s
