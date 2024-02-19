@@ -14,7 +14,7 @@ kubectl apply -f - <<EOF
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
-  name: bigbang-catalog 
+  name: bigbang 
   namespace: ${WORKSPACE_NAME}
   labels:
     kommander.d2iq.io/gitapps-gitrepository-type: catalog
