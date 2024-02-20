@@ -25,5 +25,5 @@ spec:
     branch: main
   timeout: 20s
   url: https://github.com/bovan01/dkp-bigbang
-
+EOF
 ```
